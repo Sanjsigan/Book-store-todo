@@ -47,7 +47,7 @@ const onSubmit=(e)=>{
                 <input value={price} onChange={(e)=>setPrice(e.target.value)} className="form-control" type="text" placeholder="Add price"/>
            </div>
            <div className="form-group">
-                <label>For sale:</label>
+                <label>For available:</label>
                 <input value={forSale} onChange={(e)=>setForsale(e.target.checked)} className="form-control form-check-input" type="checkbox" placeholder="Add price"/>
            </div>
             <br/>

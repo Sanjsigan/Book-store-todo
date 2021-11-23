@@ -15,15 +15,16 @@ function App() {
     {
       id:1,
       bookName:'Bookname1',
-      author:'sanjsigan',
+      author:'Author1',
       price:'1200',
       forSale:false
 
     },
+    
     {
       id:2,
       bookName:'Bookname2',
-      author:'sanjsigan',
+      author:'Author2',
       price:'1200',
       forSale:true
 
@@ -31,7 +32,7 @@ function App() {
     {
       id:3,
       bookName:'Bookname3',
-      author:'sanjsigan',
+      author:'Author3',
       price:'1200',
       forSale:true
 
@@ -39,7 +40,7 @@ function App() {
     {
       id:4,
       bookName:'Bookname4',
-      author:'sanjsigan',
+      author:'Author4',
       price:'1200',
       forSale:false
 
@@ -48,6 +49,7 @@ function App() {
   
   //delete 
   const deleteBook=(id)=>{
+    if (window.confirm('Are you sure you wish to delete this item?'))
     setBook(Books.filter((book)=>book.id !==id));
   }
 
@@ -66,7 +68,7 @@ function App() {
      <Header onShowBook={()=>setShowbook(!showBook)} onShow={showBook}  userName='Sanjsigan'/>
      {showBook && <AddBooks onAddbook={addBook}/>}
      <br/>
-     {Books.length>0 ? <Booklist path="/book-list" onClick={deleteBook} bookList={Books}/>:'Sorry no books are available here'}
+     {Books.length>0 ? <Booklist path="/book-list" onClick={deleteBook} bookList={Books}/>:"No books available here"}
 
     </div>
   
