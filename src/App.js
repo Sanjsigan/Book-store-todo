@@ -68,8 +68,9 @@ function App() {
      <Header onShowBook={()=>setShowbook(!showBook)} onShow={showBook}  userName='Sanjsigan'/>
      {showBook && <AddBooks onAddbook={addBook}/>}
      <br/>
-     {Books.length>0 ? <Booklist path="/book-list" onClick={deleteBook} bookList={Books}/>:"No books available here"}
-
+          <div className="container-fluid">
+          {Books.length>0 ? <Booklist path="/book-list" onClickDelete={deleteBook} bookList={Books}/>:"No books available here"}
+          </div>
     </div>
   
     </Router>
